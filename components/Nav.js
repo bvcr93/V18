@@ -4,8 +4,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const Nav = () => {
   return (
-    <div className='bg-white  w-full h-[60px] flex  items-center justify-around overflow-hidden   '>
-        <div className='flex  left-10 items-center'>
+    <div className='bg-white sticky top-0 px-20 w-full h-[70px] flex  items-center justify-between  z-50  '>
+        <div className='flex  items-center'>
           <h1 >V18</h1>
           <form >
             <button>
