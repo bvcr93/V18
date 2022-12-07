@@ -5,6 +5,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import CloseIcon from "@mui/icons-material/Close";
+import NavLinks from "./NavLinks";
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const router = useRouter();
@@ -35,11 +36,7 @@ const Nav = () => {
           </form>
         </div>
         <div className="space-x-8 lg:flex hidden">
-          <Link href="/blog">Blog</Link>
-          <Link href="/about">Camping</Link>
-          <Link href="/">Climbing</Link>
-          <Link href="/cameras">Cameras</Link>
-          <Link href="/food">Food</Link>
+         <NavLinks/>
           <SearchIcon />
         </div>
         <div className="lg:hidden flex">
