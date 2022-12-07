@@ -7,13 +7,13 @@ const firstBlog = () => {
   return (
     <div className="bg-[url('')] ">
       <Image
-      width={1000}
-      height={1000}
+        width={1000}
+        height={1000}
         className=" bg-cover object-cover w-full h-[503px]"
         src="https://images.unsplash.com/photo-1578886141033-b9f066572135?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         alt=""
       />
-      <div className="absolute  top-[30%] left-0   px-10 w-[470px] text-white text-4xl ">
+      <div className="absolute  top-[40%] left-0   px-10 w-[470px] text-white text-4xl ">
         <p>tribute to jesse schmoe</p>
         <p>cofounder of v18</p>
         <p>2019</p>
@@ -65,17 +65,16 @@ const firstBlog = () => {
         both know how much they are loved. They know you loved them so much, and
         they sure will love you forever. We love you forever, Jesse. V18
       </div>
-      <div className="flex justify-around">
+      <div className="md:flex justify-around">
         <div>
           <h1 className="ml-10">Previous story</h1>
-      <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text=""/>
+          <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text="" />
+        </div>
+        <div>
+          <h1 className="ml-10">Next story</h1>
+          <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text="" />
+        </div>
       </div>
-      <div>
-        <h1 className="ml-10">Next story</h1>
-      <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text=""/>
-      </div>
-      </div>
-     
     </div>
   );
 };
