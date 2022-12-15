@@ -3,11 +3,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="">
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-        distinctio pariatur sapiente nihil reiciendis adipisci aut voluptatum
-        magnam eaque! Quae!
+    <div className="w-full h-screen flex items-center justify-center">
+      <h2 className="text-6xl">
+       HOME PAGE
       </h2>
     </div>
   );

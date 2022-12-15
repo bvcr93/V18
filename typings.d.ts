@@ -1,6 +1,6 @@
 type Category = 
  | "blog"
- | "Climbing"
- | "Camping"
- | "Camera"
- | "Surfing"
+ | "climbing"
+ | "camping"
+ | "camera"
+ | "surfing"

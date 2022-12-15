@@ -3,7 +3,7 @@ import { JsxElement } from "typescript";
 import Button from "./Button";
 
 type Props = {
-  img: string;
+  img?: string;
   text: string;
  
 };

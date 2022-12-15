@@ -6,6 +6,7 @@ import ReorderIcon from "@mui/icons-material/Reorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
+import Image from "next/image";
 const Nav = () => {
   const [nav, setNav] = useState(false);
   const router = useRouter();
@@ -20,8 +21,9 @@ const Nav = () => {
 
   return (
     <>
-      <div className="bg-white sticky top-0 px-20  w-full h-[70px] flex    items-center justify-between  z-50  ">
+      <div className="bg-white sticky top-0  border px-20  w-full h-[90px] flex    items-center justify-between  z-50  ">
         <div className="flex  items-center">
+          {/* <Image height={50} width= {50} alt="" src={}/> */}
           <h1>V18</h1>
           <form>
             <button>
@@ -35,11 +37,11 @@ const Nav = () => {
             />
           </form>
         </div>
-        <div className="space-x-8 lg:flex hidden">
-         <NavLinks/>
+        <div className="space-x-8 lg:flex hidden ">
+          <NavLinks  />
           <SearchIcon />
         </div>
-        <div className="lg:hidden flex">
+        <div className="lg:hidden flex space-x-4">
           <button onClick={openNav} className="md:hidden flex">
             {!nav ? <ReorderIcon /> : <CloseIcon />}
           </button>
@@ -51,15 +53,19 @@ const Nav = () => {
       <div
         className={
           nav
-            ? "absolute w-full top-[70px] bg-white flex flex-col items-center space-y-4"
+            ? "absolute w-full top-[90px] bg-white flex flex-col items-center space-y-4"
             : "absolute left-[-100%]"
         }
       >
-        <Link href="/blog">Blog</Link>
-        <Link href="/about">Camping</Link>
-        <Link href="/">Climbing</Link>
+
+        {/* <Link href="/blog">Blog</Link>
+        <Link href="/Camping">Camping</Link>
+        <Link href="/climbing">Climbing</Link>
         <Link href="/cameras">Cameras</Link>
-        <Link href="/food">Food</Link>
+        <Link href="/food">Food</Link> */}
+        <div className="h-[300px] md:h-[50px]   ">
+          <NavLinks />
+        </div>
       </div>
     </>
   );
