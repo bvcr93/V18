@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 const Blog = () => {
   return (
     <div>
-      <div className='px-20 text-white space-y-8 bg-cover   flex flex-col justify-center w-full h-[750px] bg-[url("https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80")]  '>
+      <div className='px-20 text-white space-y-8 bg-cover  flex flex-col justify-center w-full h-[750px] bg-[url("https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80")]  '>
         <p className="tracking-widest">LATEST STORY</p>
         <h1 className="text-2xl md:text-6xl w-[50%] font-bold leading-snug ">V18 Rentals: An Environmental and Ethos Based Take on the Gear Rental Industry</h1>
         <Link href="/blog/first">
@@ -22,7 +22,7 @@ const Blog = () => {
           <Card
             text="loremlreom"
             img="https://v1.tailwindcss.com/img/card-top.jpg"
-
+            
           />
           <Card
             text="loremlreom"
@@ -36,7 +36,7 @@ const Blog = () => {
             text="loremlreom"
             img="https://v1.tailwindcss.com/img/card-top.jpg"
           />
-
+        
         </div>
       </div>
     </div>
