@@ -5,6 +5,7 @@ const nextConfig = {
       "images.unsplash.com",
       "storage.googleapis.com",
       "www.v18rentals.com",
+      "s3.amazonaws.com"
     ],
   },
   reactStrictMode: true,

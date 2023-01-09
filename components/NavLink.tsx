@@ -9,7 +9,7 @@ const NavLink = ({ category, isActive }: Props) => {
   return (
     <Link
       className={`navLink  ${
-        isActive && " underline decoration-black underline-offset-8 "
+        isActive && " underline decoration-black underline-offset-8  "
       }`}
       href={`/${category}`}
     >

@@ -10,7 +10,7 @@ type Props = {
 
 const Card = ({ img, text }: Props) => {
   return (
-    <div className="cursor-pointer max-w-[500px] rounded  shadow-2xl h-[540px]  m-4 relative">
+    <div className="cursor-pointer max-w-[500px] bg-white rounded  shadow-2xl h-[540px]  m-4 relative">
       <img src={img} alt="" className="h-full " />
       <div className="px-6 py-4 ">
         <div className="font-bold text-xl mb-2  text-white absolute top-[50%] left-[50%]">

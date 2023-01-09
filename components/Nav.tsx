@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import SearchIcon from "@mui/icons-material/Search";
@@ -8,9 +8,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
 import Image from "next/image";
 import Button from "@mui/material/Button";
+import Link from "next/link";
 
-
-const Nav = ( ) => {
+const Nav = () => {
   const [nav, setNav] = useState(false);
   const router = useRouter();
   const openNav = () => {
@@ -24,10 +24,8 @@ const Nav = ( ) => {
 
   return (
     <>
-      <div
-        className="w-full border-b sticky top-0 z-50  bg-white"
-      >
-        <div className=" max-w-[1240px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
+      <div className="w-full border-b sticky top-0 z-50  bg-white  ">
+        <div className=" max-w-[1470px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
           <div className="flex  items-center">
             <Image
               width={60}
@@ -58,8 +56,9 @@ const Nav = ( ) => {
             <button onClick={openNav} className="md:hidden flex">
               {!nav ? <ReorderIcon /> : <CloseIcon />}
             </button>
-
-            <ShoppingCartOutlinedIcon />
+            <Link href="/cart">
+              <ShoppingCartOutlinedIcon />
+            </Link>
             <button className="rounded-full  border p-1 px-4">Sign In</button>
           </div>
         </div>
@@ -75,7 +74,7 @@ const Nav = ( ) => {
         <Link href="/climbing">Climbing</Link>
         <Link href="/cameras">Cameras</Link>
         <Link href="/food">Food</Link> */}
-          <div className="h-[300px]   flex items-center justify-center ">
+          <div className="h-[300px]  flex items-center justify-center">
             <NavLinks />
           </div>
         </div>
