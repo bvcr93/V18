@@ -5,14 +5,15 @@ type Props = {
   children: React.ReactNode
 }
 
-const Layout = ({ children }:Props) => {
-  return (
-    <>
-      <Nav />
-      <div>{children}</div>
-      <Footer />
-    </>
-  );
+const Layout = ({ children }: Props) => {
+return (
+  <>
+  <Nav/>
+  <div>{children}</div>
+  <Footer/>
+  </>
+)
+  
 };
 
 export default Layout;

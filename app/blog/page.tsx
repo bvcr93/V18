@@ -22,7 +22,7 @@ const Blog = () => {
           <Card
             text="loremlreom"
             img="https://v1.tailwindcss.com/img/card-top.jpg"
-            
+
           />
           <Card
             text="loremlreom"
@@ -36,7 +36,7 @@ const Blog = () => {
             text="loremlreom"
             img="https://v1.tailwindcss.com/img/card-top.jpg"
           />
-        
+
         </div>
       </div>
     </div>
