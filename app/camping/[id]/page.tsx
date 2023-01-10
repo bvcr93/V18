@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Items = ({ id }: Props) => {
-  return <h1></h1>;
+  return <h1>{id}</h1>;
 };
 
 export default Items;
