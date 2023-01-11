@@ -24,7 +24,7 @@ const HomePage = () => {
 
     return (
         <div className="px-4 ">
-            <header className='bg-cover text-white h-[700px]  flex justify-center items-center bg-[url("https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2022/03/03122909/best-waterproof-tents-header-16.jpg")]'>
+            <header className='bg-cover text-white h-[700px]  flex justify-center md:justify-start md:px-16 items-center bg-[url("https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2022/03/03122909/best-waterproof-tents-header-16.jpg")]'>
                 <div className="p-4 h-[500px] w-[400px] bg-white">
                     <div className="flex space-x-5">
                         <p

@@ -7,8 +7,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 import NavLinks from "./NavLinks";
 import Image from "next/image";
-import Button from "@mui/material/Button";
 import Link from "next/link";
+import Calendar from "./Calendar";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -27,15 +27,16 @@ const Nav = () => {
       <div className="w-full border-b sticky top-0 z-50  bg-white  ">
         <div className=" max-w-[1470px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
           <div className="flex  items-center">
-            <Image
-              width={60}
-              height={100}
-              src={
-                "https://www.v18rentals.com/src/images/v18-logo.7aabcca883b8a0975dc0c5672469ff1d.svg"
-              }
-              alt={""}
-            />
-
+            <Link href="/">
+              <Image
+                width={60}
+                height={100}
+                src={
+                  "https://www.v18rentals.com/src/images/v18-logo.7aabcca883b8a0975dc0c5672469ff1d.svg"
+                }
+                alt={""}
+              />
+            </Link>
             <form className="md:border ml-10 flex">
               <button className="mr-10">
                 <SearchIcon className="z-2 relative ml-5 " />
@@ -47,6 +48,9 @@ const Nav = () => {
                 className="hidden md:flex w-300px py-2 z-3 m-2 outline-none"
               />
             </form>
+            <div className="hidden md:flex p-3">
+              <Calendar />
+            </div>
           </div>
           <div className="space-x-8 lg:flex hidden ">
             <NavLinks />
@@ -77,6 +81,9 @@ const Nav = () => {
           <div className="h-[300px]  flex items-center justify-center">
             <NavLinks />
           </div>
+        </div>
+        <div className="md:hidden  ">
+          <Calendar />
         </div>
       </div>
     </>
