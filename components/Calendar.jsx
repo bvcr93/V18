@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import EastIcon from "@mui/icons-material/East";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
@@ -15,15 +16,19 @@ const Calendar = () => {
 
   return (
     <div className="relative text-black ">
-      <div className="px-4 flex items-center justify-center">
+      <div className="px-4 flex items-center justify-around">
         <span
-          className="border p-2 m-4 cursor-pointer w-screen md:w-full  text-center"
+          className="border p-2 m-4 cursor-pointer w-screen md:w-full flex justify-around  text-center"
           onClick={() => setOpenDate(!openDate)}
         >
-          {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
-            date[0].endDate,
-            "MM/dd/yyyy"
-          )}`}
+          <p> {format(date[0].startDate, "MM/dd/yyyy")}</p>
+
+          <p>
+            {" "}
+            <EastIcon fontSize="small" />{" "}
+          </p>
+
+          <p> {format(date[0].endDate, "MM/dd/yyyy")}</p>
         </span>
       </div>
       {openDate && (

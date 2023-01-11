@@ -12,7 +12,7 @@ import Calendar from "./Calendar";
 import SearchField from "./SearchField";
 
 const Nav = () => {
-  const [search, setSearch] = useState(false)
+  const [search, setSearch] = useState(false);
   const [nav, setNav] = useState(false);
   const router = useRouter();
   const openNav = () => {
@@ -39,24 +39,24 @@ const Nav = () => {
                 alt={""}
               />
             </Link>
-            <form onSubmit={(e) => e.preventDefault()} className="md:border ml-10 flex">
-              <button onClick={()=> setSearch(!search)} className="mr-10">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="md:border ml-10 flex "
+            >
+              <button onClick={() => setSearch(!search)} className="mr-10">
                 <SearchIcon className="z-2 relative ml-5 " />
               </button>
+  
+                <SearchField className="hidden  md:flex w-300px py-2 z-3 mx-2 outline-none" />
 
-              <input
-                type="text"
-                placeholder="Search..."
-                className="hidden md:flex w-300px py-2 z-3 m-2 outline-none"
-              />
             </form>
+
             <div className="hidden md:flex p-3">
               <Calendar />
             </div>
           </div>
           <div className="space-x-8 lg:flex hidden ">
             <NavLinks />
- 
           </div>
           <div className=" flex space-x-4 items-center">
             <button onClick={openNav} className="md:hidden flex">
@@ -85,7 +85,11 @@ const Nav = () => {
           </div>
         </div>
         <div className="md:hidden  ">
-         { !search ? <Calendar /> : <SearchField/>}
+          {!search ? (
+            <Calendar />
+          ) : (
+            <SearchField className="border p-3" SearchIcon={SearchIcon} />
+          )}
         </div>
       </div>
     </>

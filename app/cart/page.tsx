@@ -9,7 +9,7 @@ const Cart = () => {
         <p className='my-10 text-4xl text-gray-400'>Your cart is empty</p>
         </div>
 
-<div className='bg-slate-300 rounded-md h-full md:w-1/4 p-2'>
+<div className='bg-gray-200 rounded-md h-full md:w-1/4 p-2'>
 Notice
 V18 Rentals offers bouldering equipment rentals with delivery & pickup service to any address in San Francisco. Orders must be booked by midnight the day before the rental begins.
 </div>

@@ -1,10 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import Button from "../components/Button";
 import Calendar from "../components/Calendar";
-
+import SearchIcon from "@mui/icons-material/Search";
 import ProductCard from "../components/ProductCard";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import TerrainIcon from "@mui/icons-material/Terrain";
+import PanToolIcon from "@mui/icons-material/PanTool";
+import LandingSectionPics from "../components/LandingSectionPics";
+import LandingSectionNav from "../components/LandingSectionNav";
+import LandingSectionSVG from "../components/LandingSectionSVG";
 
 const HomePage = () => {
   const [activeTag, setActiveTag] = useState(null);
@@ -81,44 +88,18 @@ const HomePage = () => {
           />
         </div>
       </header>
-      <main className=" py-20 h-full w-[85%] mx-auto">
-        <nav className=" flex justify-between  ">
-          <p className="text-2xl font-bold">Most popular</p>
-          <Button
-            className="p-1 border border-black rounded-sm tracking-wider text-sm "
-            value="SEE MORE"
-          />
-        </nav>
-        <section className="md:flex grid grid-cols-2 md:items-center md:justify-center mt-10 ">
-          <ProductCard
-                      price={16}
-                      text="Organic Big Pad"
-                      src="https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L7-1?t=1607738237111094"
-                      id={0} className=" xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"          />
-          <ProductCard
-                      price={16}
-                      text="Organic Big Pad"
-                      src="https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L7-1?t=1607738237111094"
-                      id={0} className=" xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"        />
-          <ProductCard
-                      price={16}
-                      text="Organic Big Pad"
-                      src="https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L7-1?t=1607738237111094"
-                      id={0} className=" xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"        />
-          <ProductCard
-                      price={16}
-                      text="Organic Big Pad"
-                      src="https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L7-1?t=1607738237111094"
-                      id={0} className=" xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"        />
-        </section>
-        <section>
-          <nav className="text-center text-4xl font-bold mt-10">
-            <p>How it works</p>
-            <p className="h-[5px] w-[50%] bg-black mx-auto mt-10"></p>
-          </nav>
-          
-        </section>
-      </main>
+
+      <section className=" py-20 h-full w-[85%] mx-auto">
+        <LandingSectionNav title="Most popular" />
+        <LandingSectionPics />
+
+        <LandingSectionSVG />
+      </section>
+
+      <section className=" py-20 h-full w-[85%] mx-auto">
+        <LandingSectionNav title="Climbing" />
+        <LandingSectionPics />
+      </section>
     </div>
   );
 };

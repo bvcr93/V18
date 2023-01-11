@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
+import SearchIcon from "@mui/icons-material/Search";
+type Props = {
+  className: string;
+  SearchIcon?: React.ComponentType<any>;
+};
 
-type Props = {}
-
-const SearchField = (props: Props) => {
+const SearchField = ({ className, SearchIcon = undefined }: Props) => {
   return (
-    <div className='border w-full p-3 mx-auto'>
-        <input type="text" placeholder='Search...' className='outline-none' />
+    <div className={className}>
+      {SearchIcon && <SearchIcon className="text-gray-500" />}
+      <input type="text" placeholder="Search..." className="outline-none" />
     </div>
-  )
-}
-
-export default SearchField
+  );
+};
+export default SearchField;
