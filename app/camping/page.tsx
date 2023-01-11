@@ -11,6 +11,7 @@ const Camping = () => {
         {dataItems.map((item) => (
           <Link href={`/camping/${item.id}`}>
             <ProductCard
+              className=" xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"
               text={item.name}
               src={item.img}
               price={item.price}

@@ -9,8 +9,10 @@ import NavLinks from "./NavLinks";
 import Image from "next/image";
 import Link from "next/link";
 import Calendar from "./Calendar";
+import SearchField from "./SearchField";
 
 const Nav = () => {
+  const [search, setSearch] = useState(false)
   const [nav, setNav] = useState(false);
   const router = useRouter();
   const openNav = () => {
@@ -37,8 +39,8 @@ const Nav = () => {
                 alt={""}
               />
             </Link>
-            <form className="md:border ml-10 flex">
-              <button className="mr-10">
+            <form onSubmit={(e) => e.preventDefault()} className="md:border ml-10 flex">
+              <button onClick={()=> setSearch(!search)} className="mr-10">
                 <SearchIcon className="z-2 relative ml-5 " />
               </button>
 
@@ -54,9 +56,9 @@ const Nav = () => {
           </div>
           <div className="space-x-8 lg:flex hidden ">
             <NavLinks />
-            <SearchIcon />
+ 
           </div>
-          <div className="lg:hidden flex space-x-4 items-center">
+          <div className=" flex space-x-4 items-center">
             <button onClick={openNav} className="md:hidden flex">
               {!nav ? <ReorderIcon /> : <CloseIcon />}
             </button>
@@ -83,7 +85,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="md:hidden  ">
-          <Calendar />
+         { !search ? <Calendar /> : <SearchField/>}
         </div>
       </div>
     </>

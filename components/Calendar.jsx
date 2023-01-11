@@ -14,10 +14,10 @@ const Calendar = () => {
   ]);
 
   return (
-    <div className="relative ">
+    <div className="relative text-black ">
       <div className="px-4 flex items-center justify-center">
         <span
-          className="border p-2 m-4 cursor-pointer w-screen md:w-full text-center"
+          className="border p-2 m-4 cursor-pointer w-screen md:w-full  text-center"
           onClick={() => setOpenDate(!openDate)}
         >
           {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
