@@ -12,6 +12,7 @@ import PanToolIcon from "@mui/icons-material/PanTool";
 import LandingSectionPics from "../components/LandingSectionPics";
 import LandingSectionNav from "../components/LandingSectionNav";
 import LandingSectionSVG from "../components/LandingSectionSVG";
+import OrganicBigPad from "organic-big-pad.jpeg";
 
 const HomePage = () => {
   const [activeTag, setActiveTag] = useState(null);
@@ -90,15 +91,40 @@ const HomePage = () => {
       </header>
 
       <section className=" py-20 h-full w-[85%] mx-auto">
-        <LandingSectionNav title="Most popular" />
-        <LandingSectionPics />
+        <LandingSectionNav title="Most popular" Button={Button}/>
+        <LandingSectionPics 
+        
+        />
 
         <LandingSectionSVG />
       </section>
 
       <section className=" py-20 h-full w-[85%] mx-auto">
-        <LandingSectionNav title="Climbing" />
-        <LandingSectionPics />
+        <LandingSectionNav title="Climbing" Button={Button}/>
+        <LandingSectionPics 
+
+          src1="https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L457-1?t=1607943249874937"
+          src2={
+            "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L150-1?t=1607901879503845"
+          }
+          src3={
+            "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L256-1?t=1568433703589904"
+          }
+          src4={
+            "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L267-1?t=1577179047023696"
+          }
+          price1={20}
+          price2={30}
+          price3={40}
+          price4={50}
+          title1 = "Organic Big Pad" 
+          title2="Organic Simple Pad" 
+          title3="DeWoodstok Hold Brush" 
+          title4="Portable LED Light"/>
+      </section>
+      <section className=" py-20 h-full w-[85%] mx-auto">
+      <LandingSectionNav title="Last from us" />
+      <div className=""></div>
       </section>
     </div>
   );

@@ -6,7 +6,7 @@ import { dataItems } from "../../data";
 const Camping = () => {
   return (
     <div className="max-w-[80%] mx-auto ">
-      <EquipmentHeader headerCategory="Equipment/Camping" category="Camping" />
+      <EquipmentHeader text="tents" headerCategory="Equipment/Camping" category="Camping" />
       <div className="md:grid-cols-2  lg:grid-cols-4 grid grid-cols-2 place-items-center">
         {dataItems.map((item) => (
           <Link href={`/camping/${item.id}`}>

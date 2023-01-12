@@ -59,8 +59,8 @@ const Nav = () => {
             <NavLinks />
           </div>
           <div className=" flex space-x-4 items-center">
-            <button onClick={openNav} className="md:hidden flex">
-              {!nav ? <ReorderIcon /> : <CloseIcon />}
+            <button onClick={openNav} className="lg:hidden flex ">
+              {!nav ? <ReorderIcon className="text-2xl" /> : <CloseIcon />}
             </button>
             <Link href="/cart">
               <ShoppingCartOutlinedIcon />

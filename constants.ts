@@ -1,7 +1,7 @@
 export const categories: Category [] = [
     "blog",
-    "Climbing",
+    "climbing",
     "camping",
-    "Camera",
-    "Surfing"
+    "camera",
+    "surfing"
 ]
