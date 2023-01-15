@@ -10,11 +10,11 @@ type Props = {
 
 const LandingSectionNav = ({title, Button = undefined}:Props) => {
   return (
-    <nav className=" flex justify-between  ">
+    <nav className=" flex justify-between mb-10  ">
     <p className="text-2xl font-bold">{title}</p>
     <Link href="/camping">
      {Button && <Button
-        className="hover:bg-black hover:text-white p-1 border border-black rounded-sm tracking-wider text-sm "
+        className="hover:bg-black hover:text-white p-1 border border-black rounded-sm tracking-wider text-lg "
         value="SEE MORE"
       />}
     </Link>

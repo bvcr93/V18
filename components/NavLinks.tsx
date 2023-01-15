@@ -11,7 +11,7 @@ const NavLinks = () => {
     return pathname?.split("/").pop() === path;
   };
   return (
-    <div className="flex flex-col md:inline  ">
+    <div className="flex flex-col md:inline   ">
       {categories.map((category) => (
         <NavLink
           key={category}

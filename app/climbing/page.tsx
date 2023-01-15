@@ -27,7 +27,7 @@ const Climbing = () => {
       </ProductGridSection>
       <ProductGridSection title={"Brushes"}>
         {Brushes.map(brush => (
-          <ProductCard text={brush.name} src= {brush.img} className={"xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"} />
+          <ProductCard text={brush.name} src={brush.img} price = {brush.price} className={"xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"} />
         ))}
       </ProductGridSection>
 

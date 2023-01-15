@@ -24,7 +24,7 @@ const ProductCard = ({ text, src, price, className, SearchIcon = undefined,PanTo
       {PanToolIcon && <PanToolIcon className=" md:text-8xl text-4xl mt-5" />}
       {src && <Image src={src} alt="" width={240} height={320} />}
       <p className="mt-10 text-gray-600 md:text-xl">{text}</p>
-      {price && <p className="text-base">${price} today</p>}
+      {price && <p className="text-base mt-2">${price} today</p>}
     </div>
   );
 };

@@ -55,7 +55,7 @@ const Nav = () => {
               <Calendar />
             </div>
           </div>
-          <div className="space-x-8 lg:flex hidden ">
+          <div className="space-x-8 lg:flex hidden  ">
             <NavLinks />
           </div>
           <div className=" flex space-x-4 items-center">
@@ -65,7 +65,8 @@ const Nav = () => {
             <Link href="/cart">
               <ShoppingCartOutlinedIcon />
             </Link>
-            <button className="rounded-full  border p-1 px-4">Sign In</button>
+            <Link href = "/sign-in"><button className="rounded-full  border p-1 px-4">Sign In</button></Link>
+            
           </div>
         </div>
         <div
@@ -75,11 +76,7 @@ const Nav = () => {
               : "absolute left-[-100%] "
           }
         >
-          {/* <Link href="/blog">Blog</Link>
-        <Link href="/Camping">Camping</Link>
-        <Link href="/climbing">Climbing</Link>
-        <Link href="/cameras">Cameras</Link>
-        <Link href="/food">Food</Link> */}
+      
           <div className="h-[300px]  flex items-center justify-center">
             <NavLinks />
           </div>
