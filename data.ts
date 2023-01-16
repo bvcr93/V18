@@ -1,7 +1,18 @@
 
+export const winterTents = [
+    {id:1, name: "The North Face Mtn 25 2P", price: 42, img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L369-1?t=1608002389015888"},
+    {id:2, name: "The North Face Bastion 4P", price: 60, img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L295-1?t=1608002795335766"},
+    {id:3, name: "The North Face Mtn 25 2P", price: 42, img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L369-1?t=1608002389015888"},
+]
 
+ export type CampingItem  = {
+id: number
+price: number
+name: string
+img: string
+}
 
-export const dataItems = [
+export const campingItems: CampingItem[] = [
     {
         id: 1,
         name: "The North Face Bivy",

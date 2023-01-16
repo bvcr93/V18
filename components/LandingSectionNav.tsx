@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 
-import Button from './Button'
-
 type Props = {
     title: string
     Button?: React.ComponentType<any>;

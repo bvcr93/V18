@@ -4,19 +4,12 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Button from "../components/Button";
 import Calendar from "../components/Calendar";
-import SearchIcon from "@mui/icons-material/Search";
 import ProductCard from "../components/ProductCard";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import TerrainIcon from "@mui/icons-material/Terrain";
-import PanToolIcon from "@mui/icons-material/PanTool";
-import LandingSectionPics from "../components/LandingSectionPics";
 import LandingSectionNav from "../components/LandingSectionNav";
 import LandingSectionSVG from "../components/LandingSectionSVG";
-import OrganicBigPad from "organic-big-pad.jpeg";
 import ProductGridSection from "../components/ProductGridSection";
 import { ClimbingProductsLanding, MostPopular } from "../data";
-import Image from "next/image";
-import Card from "../components/Card";
+
 
 const HomePage = () => {
   const [activeTag, setActiveTag] = useState(null);
