@@ -1,8 +1,11 @@
+
 import React from "react";
 import Button from "../../components/Button";
+import RootLayout from "../layout";
 
 const SignInForm = () => {
   return (
+ 
     <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-lg">
         <header className="text-xl font-medium mb-4 ml-6">Sign In</header>
@@ -38,8 +41,12 @@ const SignInForm = () => {
           </a>
         </div>
       </div>
+
     </div>
+  
   );
 };
 
+
 export default SignInForm;
+

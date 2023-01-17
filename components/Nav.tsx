@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import SearchIcon from "@mui/icons-material/Search";
 import ReorderIcon from "@mui/icons-material/Reorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -23,10 +23,10 @@ const Nav = () => {
   useEffect(() => {
     setNav(false);
   }, [router]);
-
+const pathname = usePathname()
   return (
     <>
-      <div className="w-full border-b sticky top-0 z-50  bg-white  ">
+      <div className={ pathname !== "/" ? "  w-full border-b sticky top-0 z-50  bg-white  " : "w-full h-0 sticky top-0 z-50  bg-transparent shadow-2xl "}>
         <div className=" max-w-[1470px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
           <div className="flex  items-center">
             <Link href="/">
@@ -47,7 +47,7 @@ const Nav = () => {
                 <SearchIcon className="z-2 relative ml-5 " />
               </button>
   
-                <SearchField className="hidden  md:flex w-300px py-2 z-3 mx-2 outline-none" />
+                <SearchField className="hidden  md:flex w-300px py-2 z-3 mx-2 outline-none " />
 
             </form>
 

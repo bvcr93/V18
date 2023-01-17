@@ -9,7 +9,7 @@ const SearchField = ({ className, SearchIcon = undefined }: Props) => {
   return (
     <div className={className}>
       {SearchIcon && <SearchIcon className="text-gray-500" />}
-      <input type="text" placeholder="Search..." className="outline-none" />
+      <input type="text" placeholder="Search..." className="outline-none bg-transparent" />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import { campingItems } from '../data';
+import { campingTents } from '../app/camping/[itemId]/types';
 import { useMockState } from '../hooks/useMockState';
 
 type Props = {
@@ -10,11 +10,17 @@ type Props = {
   
 
 export const DetailsDescription = ({params: { category }}:Props) => {
-    const { data, loading, error } = useMockState(
-        campingItems.find((item) => item.id.toString() === category),
+    const { data } = useMockState(
+        campingTents.find((item) => (item.id.toString() === category)),
         true
       );
+ 
   return (
+    <div>
     <div>{`Equipment / ${category}`}</div>
+  
+    <p>{data?.desc}</p>
+   
+    </div>
   )
 }

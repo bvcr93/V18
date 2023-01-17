@@ -2,5 +2,5 @@ type Category =
  | "blog"
  | "climbing"
  | "camping"
- | "camera"
+ | "cameras"
  | "surfing"

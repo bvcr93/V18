@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Card from "../../components/Card";
+import RootLayout from "../layout";
 const Blog = () => {
   return (
+
     <div>
       <div className='px-20 text-white space-y-8 bg-cover  flex flex-col justify-center w-full h-[750px] bg-[url("https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80")]  '>
         <p className="tracking-widest">LATEST STORY</p>
@@ -42,6 +44,7 @@ const Blog = () => {
         </div>
       </div>
     </div>
+   
   );
 };
 

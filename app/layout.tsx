@@ -1,22 +1,27 @@
 
-import Footer from "../components/Footer"
-import Nav from "../components/Nav"
-import "../styles/globals.css"
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import "../styles/globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+showFooter: boolean
+}
+
+
+export default function RootLayout({ children , showFooter}: RootLayoutProps) {
+
   return (
     <html>
       <head />
-     
       <body>
-      <Nav/>
-      {children}
-      <Footer/>
+        <Nav />
+        {children}
+        <Footer/>
+ 
       </body>
     </html>
-  )
+  );
 }
