@@ -5,8 +5,8 @@ import RootLayout from "../layout";
 
 const SignInForm = () => {
   return (
- 
-    <div className="flex items-center justify-center h-screen">
+
+ <div className="flex items-center justify-center h-screen">
       <div className="w-full max-w-lg">
         <header className="text-xl font-medium mb-4 ml-6">Sign In</header>
         <form className="bg-white p-6 rounded-lg ">
@@ -43,7 +43,8 @@ const SignInForm = () => {
       </div>
 
     </div>
-  
+
+
   );
 };
 

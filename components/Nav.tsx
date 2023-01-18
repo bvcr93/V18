@@ -26,7 +26,7 @@ const Nav = () => {
 const pathname = usePathname()
   return (
     <>
-      <div className={ pathname !== "/" ? "  w-full border-b sticky top-0 z-50  bg-white  " : "w-full h-0 sticky top-0 z-50  bg-transparent shadow-2xl "}>
+      <div className={ pathname !== "/" ? "  w-full border-b sticky top-0 z-50  bg-white  " : "w-full h-0  sticky top-0 z-50  bg-transparent  "}>
         <div className=" max-w-[1470px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
           <div className="flex  items-center">
             <Link href="/">
@@ -52,7 +52,7 @@ const pathname = usePathname()
             </form>
 
             <div className="hidden md:flex p-3">
-              <Calendar />
+            { pathname !== "/" &&  <Calendar />}
             </div>
           </div>
           <div className="space-x-8 lg:flex hidden  ">

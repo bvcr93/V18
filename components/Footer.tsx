@@ -1,11 +1,16 @@
+
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import Card from './Card'
 
 type Props = {}
 
 const Footer = (props: Props) => {
+
   return (
-    <div className='bg-gray-200 h-full py-5'>
+ 
+ 
+      <div className='bg-gray-200 h-full py-5'>
       <div className='w-[80%] mx-auto md:flex grid grid-cols-1 py-10'>
    <div className='w-[400px]' >
     <h1 className='py-10 text-md font-bold space-y-4'>ABOUT</h1>
@@ -36,6 +41,8 @@ const Footer = (props: Props) => {
  <p className='mt-10'>  Copyright © 2020 V18 Rentals. All Rights Reserved.</p>
    </div>
     </div>
+ 
+   
   )
 }
 

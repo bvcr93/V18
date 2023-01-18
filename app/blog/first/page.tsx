@@ -114,21 +114,13 @@ const firstBlog = () => {
           everyone, no matter their situation.
         </p>
       </div>
-      <div className="flex items-center justify-center">
-      <Link href="/blog/second">
-      <Image width={720} height={100} src={image3} alt=""  className="shadow hover:shadow-2xl h-[500px] object-cover"/>
-      </Link>
+      <div className="flex items-center justify-center m-10 flex-col">
+        <p>More from V18</p>
+        <Link href="/blog/second">
+          <Image width={720} height={100} src={image3} alt="" className="shadow hover:shadow-2xl h-[500px] object-cover" />
+        </Link>
       </div>
-      <div className="md:flex justify-around">
-        <div>
-          <h1 className="ml-10">Previous story</h1>
-          <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text="" />
-        </div>
-        <div>
-          <h1 className="ml-10">Next story</h1>
-          <Card img="https://v1.tailwindcss.com/img/card-top.jpg" text="" />
-        </div>
-      </div>
+      
     </div>
   );
 };

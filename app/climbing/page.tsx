@@ -1,8 +1,8 @@
 import React from "react";
 import EquipmentHeader from "../../components/EquipmentHeader";
 import ProductCard from "../../components/ProductCard";
-import { ClimgbingCrashPads } from "../../ClimbingProducts";
-import { Brushes } from "../../ClimbingProducts";
+import { ClimgbingCrashPads } from "./ClimbingProducts";
+import { Brushes } from "./ClimbingProducts";
 import ProductGridSection from "../../components/ProductGridSection";
 const Climbing = () => {
   return (

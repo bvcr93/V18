@@ -78,3 +78,4 @@ export const winterTents: WinterTents[] = [
     img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L369-1?t=1608002389015888",
   },
 ];
+
