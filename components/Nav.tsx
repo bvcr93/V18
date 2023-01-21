@@ -26,7 +26,7 @@ const Nav = () => {
 const pathname = usePathname()
   return (
     <>
-      <div className={ pathname !== "/" ? "  w-full border-b sticky top-0 z-50  bg-white  " : "w-full h-0  sticky top-0 z-50  bg-transparent  "}>
+      <div className={ pathname !== "/" ? "  w-full border-b sticky top-0 z-50  bg-white  " : "w-full h-0  sticky top-0 z-50 bg-transparent  "}>
         <div className=" max-w-[1470px] mx-auto  w-full h-[90px] flex items-center justify-between   ">
           <div className="flex  items-center">
             <Link href="/">
@@ -55,6 +55,7 @@ const pathname = usePathname()
             { pathname !== "/" &&  <Calendar />}
             </div>
           </div>
+          <div className="flex items-center">
           <div className="space-x-8 lg:flex hidden  ">
             <NavLinks />
           </div>
@@ -67,6 +68,7 @@ const pathname = usePathname()
             </Link>
             <Link href = "/sign-in"><button className="rounded-full  border p-1 px-4">Sign In</button></Link>
             
+          </div>
           </div>
         </div>
         <div

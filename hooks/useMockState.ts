@@ -25,7 +25,7 @@ export function useMockState<TData>(resolvedData: TData, fails: boolean = false)
                 loading: false,
                 error: fails,
             });
-        }, 200);
+        }, 1000);
 
         return () => {
             clearTimeout(timeout);

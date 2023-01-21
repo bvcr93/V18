@@ -1,7 +1,9 @@
 "use client"
 import React from 'react'
 import { useMockState } from '../../../hooks/useMockState';
-import { surfBoards, womenSuits } from '../types';
+// import { surfBoards, womenSuits } from '../types';
+import { surfBoards } from '../types';
+import { surfingEquipment } from '../types';
 import Spinner from "../../../components/Spinner";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import RemoveCircleOutlineRoundedIcon from "@mui/icons-material/RemoveCircleOutlineRounded";
@@ -19,7 +21,9 @@ const ItemPage = ({ params: { itemId }}:Props) => {
         true
       );
 
-     
+    //  const {data, loading, error} = useMockState(surfingEquipment.find(item => (
+    //   item.surfboards.find((it => it.id.toString() === itemId)
+    //  ))))
    
         
     return (
