@@ -2,11 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 
 type ModalProps = {
-    modalIsOpen: boolean
+    
     setModalIsOpen:  React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Modal = ({modalIsOpen ,setModalIsOpen}:ModalProps) => {
+const Modal = ({setModalIsOpen}:ModalProps) => {
  
    const closeModal = () => {
     setModalIsOpen(false)

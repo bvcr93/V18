@@ -11,10 +11,7 @@ import ProductGridSection from "../components/ProductGridSection";
 import { ClimbingProductsLanding, MostPopular } from "../data";
 import Modal from "../components/Modal";
 
-type ModalProps = {
-  modalIsOpen: boolean;
-  setModalIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
+
 const HomePage = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const tags = [
@@ -45,32 +42,34 @@ const HomePage = () => {
   const [headerText, setHeaderText] = useState(activeTag.header);
   const [buttonText, setButtonText] = useState(activeTag.button);
 
-useEffect(() => {
-  let index = 0;
-  setActiveTag(tags[index]);
-  setHeaderText(tags[index].header);
-  setButtonText(tags[index].button);
-  const element = document.querySelector(".bg-cover");
-  if (element) {
-    (element as HTMLElement).style.backgroundImage = `url(${tags[index].image})`;
-  }
+  useEffect(() => {
+    let index = 0;
+    setActiveTag(tags[index]);
+    setHeaderText(tags[index].header);
+    setButtonText(tags[index].button);
+    const element = document.querySelector(".bg-cover");
+    if (element) {
+      (
+        element as HTMLElement
+      ).style.backgroundImage = `url(${tags[index].image})`;
+    }
 
-  const interval = setInterval(() => {
-   
-    setTimeout(() => {
-      index = (index + 1) % tags.length;
-      setActiveTag(tags[index]);
-      setHeaderText(tags[index].header);
-      setButtonText(tags[index].button);
-      if (element) {
-        (element as HTMLElement).style.backgroundImage = `url(${tags[index].image})`;
-        
-      }
-    }, 500);
-  }, 4000);
+    const interval = setInterval(() => {
+      setTimeout(() => {
+        index = (index + 1) % tags.length;
+        setActiveTag(tags[index]);
+        setHeaderText(tags[index].header);
+        setButtonText(tags[index].button);
+        if (element) {
+          (
+            element as HTMLElement
+          ).style.backgroundImage = `url(${tags[index].image})`;
+        }
+      }, 500);
+    }, 4000);
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -78,12 +77,10 @@ useEffect(() => {
   };
 
   const handleClick = (tag: any) => {
-    
     setActiveTag(tag);
     if (tag === 1) {
       setHeaderText("Camping Gear");
       setButtonText("Rent Camping Gear");
-      
     } else if (tag === 2) {
       setHeaderText("Hiking Equipment");
       setButtonText("Rent Hiking Equipment");
@@ -91,14 +88,15 @@ useEffect(() => {
       setHeaderText("Bouldering Gear");
       setButtonText("Rent Bouldering Gear");
     }
-  }
-
+  };
 
   return (
     <div className="">
-      <header className='bg-cover text-white h-[700px]  flex justify-center md:justify-start
+      <header
+        className='bg-cover text-white h-[700px]  flex justify-center md:justify-start
        md:px-16 items-center
-        bg-[url("https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2022/03/03122909/best-waterproof-tents-header-16.jpg")] '>
+        bg-[url("https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2022/03/03122909/best-waterproof-tents-header-16.jpg")] '
+      >
         <div className="p-4 h-[500px] w-[400px] bg-white mt-28">
           <div className="flex space-x-5">
             <p
@@ -175,9 +173,11 @@ useEffect(() => {
       </section>
       <section className=" py-20 h-full w-[85%] mx-auto ">
         <LandingSectionNav title="Latest from us" />
-        <div className='px-20 text-white space-y-8 bg-cover  
+        <div
+          className='px-20 text-white space-y-8 bg-cover  
         flex flex-col justify-center w-full h-[750px] 
-        bg-[url("https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80")]  '>
+        bg-[url("https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1103&q=80")]  '
+        >
           <div className="w-1/2 ">
             <p className="md:text-6xl font-bold ">
               {" "}
@@ -229,9 +229,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
-      {modalIsOpen && (
-        <Modal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
-      )}
+      {modalIsOpen && <Modal setModalIsOpen={setModalIsOpen} />}
     </div>
   );
 };

@@ -1,14 +1,12 @@
 "use client"
 import React from 'react'
 import { useMockState } from '../../../hooks/useMockState';
-// import { surfBoards, womenSuits } from '../types';
-import { surfBoards } from '../types';
-import { surfingEquipment } from '../types';
 import Spinner from "../../../components/Spinner";
 import AddCircleOutlineRoundedIcon from "@mui/icons-material/AddCircleOutlineRounded";
 import RemoveCircleOutlineRoundedIcon from "@mui/icons-material/RemoveCircleOutlineRounded";
 import Button from "../../../components/Button";
 import { DetailsDescription } from '../../../components/DetailsDescription';
+import { mockSurfingRes } from '../types';
 type Props = {
     params: {
       itemId: string;
@@ -16,16 +14,13 @@ type Props = {
   };
 
 const ItemPage = ({ params: { itemId }}:Props) => {
-    const { data, loading, error } = useMockState(
-      surfBoards.find((item) => item.id.toString() === itemId),
-        true
-      );
-
-    //  const {data, loading, error} = useMockState(surfingEquipment.find(item => (
-    //   item.surfboards.find((it => it.id.toString() === itemId)
-    //  ))))
    
-        
+   
+      const { data, loading, error } = useMockState(
+        mockSurfingRes.items.find((item) => item.id.toString() === itemId),
+          true
+        );
+  
     return (
         <div className="h-full py-20 flex justify-around  md:w-[85%] mx-auto ">
         {loading ? (
