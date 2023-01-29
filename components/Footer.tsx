@@ -1,7 +1,9 @@
 
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Card from './Card'
+
 
 type Props = {}
 
@@ -18,7 +20,7 @@ const Footer = (props: Props) => {
     <p>Contact</p>
     <p>Terms</p>
     <p>Privacy</p>
-    <p>FAQ</p>
+    <Link href= "/faq">FAQ</Link>
    </div>
    <div className='w-[400px]' >
     <h1 className='py-10 text-md font-bold'>ADVENTURES</h1>

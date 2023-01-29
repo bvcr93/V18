@@ -16,7 +16,7 @@ const Modal = ({setModalIsOpen}:ModalProps) => {
     
   return (
     <>
-  <div className=" bg-white  p-6 rounded-lg left-[40%] top-[30%] fixed w-[400px] h-[400px] ">
+  <div className=" bg-white  p-6 rounded-lg left-[40%] shadow-2xl  top-[30%] fixed w-[400px] h-[400px] ">
     <div className="absolute top-0 right-0 p-1">
       <button onClick={closeModal}  className="text-gray-500 focus:outline-none">
         <svg  className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">

@@ -13,24 +13,35 @@ type Props = {
     };
   };
 
-const ItemPage = ({ params: { itemId }}:Props) => {
-   
-   
-      const { data, loading, error } = useMockState(
+  const ItemPage = ({ params: { itemId }}:Props) => {
+    let data, loading, error;
+  
+    try {
+      const result = useMockState(
         mockSurfingRes.items.find((item) => item.id.toString() === itemId),
           true
         );
+      data = result.data;
+      loading = result.loading;
+    } catch (err: any) {
+      
+      error = err.message;
+    }
   
+  
+
     return (
         <div className="h-full py-20 flex justify-around  md:w-[85%] mx-auto ">
         {loading ? (
           <Spinner />
         ) : (
           <div className="md:flex grid grid-cols-1 w-[90%] justify-between ">
+          {error  ? (
+           <p>An error occurred: {error}</p>
+          ) :  (<>
             <div className=" p-10">
               <img src={data?.img} alt="" className="w-[700px] h-[400px] object-cover" />
               <div className="flex items-center justify-center">
-                {" "}
                 <p className="w-[30px] h-[10px] bg-slate-300 mr-5 rounded "></p>
                 <p className="w-[30px] h-[10px] bg-slate-500 rounded"></p>
               </div>
@@ -80,7 +91,9 @@ const ItemPage = ({ params: { itemId }}:Props) => {
                 </div>
               </div>
             </div>
+            </>)}
             <hr />
+         
           </div>
         )}
       </div>

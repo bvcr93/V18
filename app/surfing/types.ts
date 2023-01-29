@@ -1,6 +1,6 @@
 
 
-type Category = "surfboards" | "womensuits" | "mensuits " | "accesories";
+type Category = "surfboards" | "womensuits" | "mensuits " | "accesories" | "surfbaordracks" | "bodyboards"
 
 type Item = {
   id: number;
@@ -12,7 +12,7 @@ type Item = {
   category: Category;
 };
 
-export interface SurfingRes {
+export interface SurfingRes  {
   status: string;
   items: Item[];
 }
@@ -72,7 +72,7 @@ export const mockSurfingRes: SurfingRes = {
     },
 
     {
-      id: 10,
+      id: 7,
       price: 20,
       name: "Patagonia Women's Summer Wetsuit - 4/3mm - Size 2",
       img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L393-1?t=1607804187101107",
@@ -80,7 +80,23 @@ export const mockSurfingRes: SurfingRes = {
       category: "womensuits",
     },
     {
-      id: 11,
+      id: 8,
+      price: 20,
+      name: "Patagonia Women's Winter Wetsuit - 5/4mm - Size 2",
+      img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L387-1?t=1607801306544145",
+      desc: "Introducing the worlds the warmest 5/4mm wetsuit—and it's the world’s most environmentally friendly wetsuit. The Patagonia Yulex wetsuit series is one of a kind, made with 85% Yulex® natural rubber/15% synthetic rubber, and Fair Trade Certified.",
+      category: "womensuits",
+    },
+    {
+      id: 9,
+      price: 20,
+      name: "Patagonia Men's Winter Wetsuit - 5/4mm - Size Small",
+      img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L403-1?t=1607804857246450",
+      desc: "Introducing the worlds the warmest 5/4mm wetsuit—and it's the world’s most environmentally friendly wetsuit. The Patagonia Yulex wetsuit series is one of a kind, made with 85% Yulex® natural rubber/15% synthetic rubber, and Fair Trade Certified.",
+      category: "mensuits ",
+    },
+    {
+      id: 10,
       price: 20,
       name: "Patagonia Men's Winter Wetsuit - 5/4mm - Size Small",
       img: "https://storage.googleapis.com/cf-public-us/v18rentals-25195/media/L403-1?t=1607804857246450",
