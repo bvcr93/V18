@@ -47,7 +47,7 @@ const pathname = usePathname()
                 <SearchIcon className="z-2 relative ml-5 " />
               </button>
   
-                <SearchField className="hidden  md:flex w-300px py-2 z-3 mx-2 outline-none " />
+                <SearchField className="hidden  md:flex w-300px py-2 z-3  outline-none " />
 
             </form>
 

@@ -12,7 +12,7 @@ const LandingSectionNav = ({title, Button = undefined}:Props) => {
     <p className="text-2xl font-bold">{title}</p>
     <Link href="/camping">
      {Button && <Button
-        className="hover:bg-black hover:text-white p-1 border border-black rounded-sm tracking-wider text-lg "
+        className="hover:bg-black hover:text-white px-2 py-1  border border-black rounded tracking-wider text-lg "
         value="SEE MORE"
       />}
     </Link>

@@ -17,8 +17,8 @@ const SignInForm = () => {
               className="border-b border-gray-400 outline-none p-2"
             />
             <input
-              type="password"
-              className="border-b border-gray-400 outline-none p-2"
+              type="password" placeholder="Password"
+              className="border-b border-gray-400 outline-none p-2 mt-5"
             />
           </div>
           <div className="flex justify-between items-center mb-4">
@@ -30,7 +30,7 @@ const SignInForm = () => {
               Password help
             </a>
           </div>
-          <button className="w-full bg-stone-800 text-white py-3 rounded hover:bg-stone-900">
+          <button className="w-full mt-4 bg-stone-800 text-white py-3 rounded hover:bg-stone-900">
             Sign In
           </button>
         </form>

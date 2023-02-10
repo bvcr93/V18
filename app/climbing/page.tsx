@@ -8,12 +8,12 @@ const Climbing = () => {
   return (
     <div className="max-w-[80%] mx-auto ">
       <EquipmentHeader
-        text=""
+        text="Crash Pads"
         headerCategory={"Equipment/Climbing"}
         category={"Climbing"}
       />
 
-      <ProductGridSection title={"Organic Crash Pads"}>
+<div className="md:grid-cols-2  lg:grid-cols-4 grid grid-cols-2 place-items-center">
         {ClimgbingCrashPads.map((item) => (
           <ProductCard
             key={item.id}
@@ -24,13 +24,21 @@ const Climbing = () => {
             }
           />
         ))}
-      </ProductGridSection>
+       
+       </div>
+     
       <ProductGridSection title={"Brushes"}>
-        {Brushes.map(brush => (
-          <ProductCard text={brush.name} src={brush.img} price = {brush.price} className={"xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"} />
+        {Brushes.map((brush) => (
+          <ProductCard
+            text={brush.name}
+            src={brush.img}
+            price={brush.price}
+            className={
+              "xl:border-l mt-4  sm:h-64 sm:w-64  md:h-96 md:w-96 lg:h-128 lg:w-128 xl:h-160 xl:w-160 flex  flex-col items-center justify-center bg-white hover:shadow-xl"
+            }
+          />
         ))}
       </ProductGridSection>
-
     </div>
   );
 };

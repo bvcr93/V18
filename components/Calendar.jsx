@@ -15,15 +15,15 @@ const Calendar = () => {
   ]);
 
   return (
-    <div className="relative text-black ">
-      <div className="px-4 flex items-center justify-around">
+    <div className="relative text-black  ">
+      <div className="px-2 flex items-center justify-around">
         <span
-          className="border p-2 m-4 cursor-pointer w-screen md:w-full flex justify-around  text-center"
+          className="border p-2  my-2 cursor-pointer w-screen md:w-full flex justify-around  text-center"
           onClick={() => setOpenDate(!openDate)}
         >
           <p> {format(date[0].startDate, "MM/dd/yyyy")}</p>
 
-          <p>
+          <p className="px-4">
             {" "}
             <EastIcon fontSize="small" />{" "}
           </p>
